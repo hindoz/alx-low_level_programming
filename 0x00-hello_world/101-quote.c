@@ -1,10 +1,8 @@
 #include <stdio.h>
-/*
- * This function to print exactle one phrase
- * and send it to stderr
- *
+/**
+ * main - Entry point
+ * Return: will return 1  (Success)
  */
-
 int  main(void)
 {
 	fprintf(stderr, "and that piece of art is useful\" - ");
