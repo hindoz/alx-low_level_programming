@@ -14,16 +14,23 @@ int main(void)
 	{
 		for (j = 0; j < 9; j++)
 		{
-			for (l = i; l < 10; l++)
+			for (k = i; l < 10; k++)
 			{
-				for (k = j + 1; k < 10; k++)
+			/*	if (k == i)
+					l = j + 1;
+				
+				else
+				{
+					l = 0;
+				}*/
+				for (; l < 10; l++)
 				{
 				putchar('0' + i);
 				putchar('0' + j);
 				putchar(' ');
-				putchar('0' + l);
 				putchar('0' + k);
-				if ((i == 9) && (j == 8) && (l == 9) && (k == 9))
+				putchar('0' + l);
+				if ((i == 9) && (j == 8) && (k == 9) && (l == 9))
 					;
 				else
 				{
