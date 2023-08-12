@@ -18,9 +18,11 @@ int main(void)
 			{
 				if (k == i)
 					l = j + 1;
-				else
-					l = 0;
 
+				else
+				{
+					l = 0;
+				}
 				for (; l < 10; l++)
 				{
 				putchar('0' + i);
