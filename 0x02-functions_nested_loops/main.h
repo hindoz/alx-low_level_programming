@@ -3,10 +3,12 @@
 void print_alphabet(void)
 {
 /* char alpha[25];*/
+int i = 97;
 
- for (int i = 97; i < 123 ; i++)
+ while (i < 123)
  {
 	 putchar(i);
+	 i++;
  }
  putchar('\n');
 }
