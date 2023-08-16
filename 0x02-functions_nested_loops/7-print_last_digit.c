@@ -12,9 +12,9 @@ int print_last_digit(int i)
 {
 	int j = i % 10;
 
-	if(i < 0)
+	if (i < 0)
 		j = j * -1;
+	return (j);
 	putchar('0' + j);
 
-	return (j);
 }
