@@ -1,9 +1,9 @@
 #include"main.h"
 
 /**
- * rev_string - print a string in reverse way
+ * rev_string - prints a string
  *
- * @s : element of string
+ * @s : entered string
  *
  */
 
@@ -14,13 +14,13 @@ void rev_string(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[i]);
-	j++;
+		j++;
 	}
-	_putchar('\n');
-	while (j >= 0)
-	{
-		_putchar(s[j]);
-		j--;
-	}
-	_putchar('\n');
+		_putchar('\n');
+		while (j >= 0)
+		{
+			_putchar(s[j]);
+			j--;
+		}
+		_putchar('\n');
 }
