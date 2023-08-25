@@ -18,7 +18,6 @@ for (i = 0; dest[i] <= '\0'; i++)
 for (i = 0; src[i] <= '\0'; i++)
 {
 	dest[j++] = src[i];
-	j++;
 }
 return (dest);
 putchar('\n');
