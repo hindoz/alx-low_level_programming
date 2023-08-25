@@ -16,12 +16,11 @@ for (i = 0; dest[i] <= '\0'; i++)
 {
 	j++;
 }
-i = 0;
-while (i < n)
+
+for (i = 0; i < n && src[i] != '\0'; i++)
 {
-	dest[j] = src[i];
-	j++;
-	i++;
+	dest[j + i] = src[i];
 }
+dest[j + i] = '\0';
 return (dest);
 }
