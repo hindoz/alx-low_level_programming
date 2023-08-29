@@ -9,15 +9,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	for (; *s != '\0'; s++)
+	int i, j;
+	char *result;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (; *accept != '\0'; accept++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*s == *accept)
+			if (s[i] == accept[j])
 			{
-				break;
+				result = &s[i];
+				return (result);
 			}
 		}
 	}
-	return (s);
+	return (0);
 }
