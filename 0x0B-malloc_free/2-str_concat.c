@@ -15,15 +15,26 @@ char *str_concat(char *s1, char *s2)
 	 * if ((s1 != NULL) && (s2 != NULL))
 	 * {
 	*/
-	while (s1[i] != '\0')
+	if (s1 != NULL)
+	{
+		while (s1[i] != '\0')
 		i++;
+	}
+	else
+		i = 0;
+	if (s2 != NULL)
+	{
 	while (s2[j] != '\0')
 		j++;
+	}
+	else 
+		j = 0;
+	/*
 	if (s1 == NULL)
 		i = 0;
 	if (s2 == NULL)
 		j = 0;
-	/*
+	*
 	 * }
 	 * else if (s1 == NULL)
 	 * i = 0;
