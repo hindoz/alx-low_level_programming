@@ -9,19 +9,29 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i, j;
-	int p[width][height];
+	int i, j, **p;
 
-	if ((width > 0) && (height > 0))
-	{
-		for (i = 0; i < width; i++)
-		{
-			for (j = 0; j < height; j++)
-				p[i][j] = 0;
-		}
-		/*return (**p);*/
-	}
-	else
+	if ((width <= 0) && (height <= 0))
 		return (NULL);
-	return (0);
+
+	p = malloc(sizeof(int *) * (height));
+
+		if (height <= 0 || width <= 0 || p == NULL)
+			return (NULL);
+
+	for (i = 0; i < height; i++)
+	{
+	p[i] = malloc(sizeof(**p) * width);
+	if (p[i] == 0)
+	{
+	while (--i)
+	free(p[i]);
+	free(p);
+	return (NULL);
+	}
+
+		for (j = 0; j < width; j++)
+			p[i][j] = 0;
+	}
+	return (p);
 }
