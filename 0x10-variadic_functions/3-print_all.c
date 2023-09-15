@@ -2,9 +2,8 @@
 
 
 /**
-* print_char - Prints a char.
-* @arg: A list of arguments pointing to
-* the character to be printed.
+* print_char - Print char.
+* @arg: list of characters
 */
 void print_char(va_list arg)
 {
@@ -17,8 +16,7 @@ printf("%c", letter);
 
 /**
 * print_int - Prints an int.
-* @arg: A list of arguments pointing to
-* the integer to be printed.
+* @arg: A list of integers to be printed.
 */
 void print_int(va_list arg)
 {
@@ -32,8 +30,7 @@ printf("%d", num);
 
 /**
 * print_float - Prints a float.
-* @arg: A list of arguments pointing to
-* the float to be printed.
+* @arg: A list of float to be printed.
 */
 void print_float(va_list arg)
 {
@@ -48,8 +45,7 @@ printf("%f", num);
 
 /**
 * print_string - Prints a string.
-* @arg: A list of arguments pointing to
-* the string to be printed.
+* @arg: A list of strings to be printed.
 */
 void print_string(va_list arg)
 {
