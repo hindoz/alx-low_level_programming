@@ -7,17 +7,17 @@
  *
  */
 
-
-size_t print_list(const list_t *h)
+size_t print_list(struct list_s *h)
 {
-	int count = 0;
+	size_t count = 0;
 
 	if (h == NULL)
 		printf("[0] (nil)");
 	while (h != NULL)
 	{
 		count++;
-		h = h->link;
+		printf("[%u] %s", h->len, h->str);
+		h = h->next;
 	}
 	return (count);
 }
