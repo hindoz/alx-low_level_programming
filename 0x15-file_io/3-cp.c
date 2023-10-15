@@ -24,7 +24,7 @@ char *create_buf(char *file)
 
 /**
  * close_file - Close the file descriptors.
- * @fd: The file descriptor to be closed.
+ * @fdc: The file descriptor to be closed.
  */
 void close_file(int fdc)
 {
@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	buf = create_buf(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	re = read(from, buf, 1024);
@@ -89,10 +88,8 @@ int main(int argc, char *argv[])
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (re > 0);
-
 	free(buf);
 	close_file(from);
 	close_file(to);
-
 	return (0);
 }
